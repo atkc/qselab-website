@@ -1,0 +1,525 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.p {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(253, 204, 68, 0.95);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.452);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 0;
+  margin: 0;
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.452);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #83006d; /* or #222 for a bit darker */
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+  font-weight: bold; /* optional for emphasis */
+}
+
+.hero {
+  position: relative; /* enables absolute positioning inside */
+  padding: 10rem 20vw;
+  background-color: #FEC628;
+  min-height: 100vh;
+  height: auto;
+}
+
+.hero-logo {
+  position: static;
+  display: block;
+  width: 160px;
+  margin: 6rem 0 0 auto; /* right-aligned inside hero padding */
+  text-align: right;
+}
+
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+}
+
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hero-text h1 {
+font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem; 
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 250px;
+  justify-content: center; /* Centers the image horizontally */
+  text-align: center;
+  align-items: center;     /* Centers the image vertically */
+  overflow: hidden; /* hides cropped parts */
+  height: 400px; /* fixed height */
+  max-width: 100%; /* Prevents horizontal overflow */
+}
+
+.hero-image img {
+  width: auto;
+  height: 100%;
+  object-fit: cover; /* crops sides to fill container */
+  object-position: center; /* centers the crop */
+  border-radius: 8px;
+}
+
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 1rem 4rem;
+  background-color: #333333;
+  color: #FEC628;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #222222;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: inherit;
+  color: #3d3d3d;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  border: 0.1rem solid  #3d3d3d;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #dfdfdf73;
+}
+
+section {
+  padding: 0rem 15vw 1rem;
+  background-color: #fcfcfc;
+  scroll-margin-top: 100px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: space-between;*/
+  flex-wrap: wrap;
+  /*gap: 2rem;*/
+  
+}
+
+section:nth-of-type(even) {
+  background-color: #f9f9f9; /* very pale grey */
+}
+
+
+section h2 {
+  position: relative;
+  margin: 6rem 0 3rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #494949;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Add a subtle accent line */
+section h2::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #FEC628; /* accent color */
+  border-radius: 3px;
+}
+
+
+section h3 {
+  /*position: sticky;*/
+  /*top: 3rem; /* matches navbar height */
+  /*padding: 1rem 5vw 1rem 1vw; /* top right bottom left */
+  /*z-index: 999;*/
+  padding: 0rem 0rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  color:#333333;
+  font-size: 1.8rem;
+  width: 100%; 
+  background-color: inherit;
+  text-align: center;
+}
+
+section h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  color:#333333;
+  font-size: 1.5rem;
+}
+
+
+.subsection {
+  padding:  0 0 2rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.subsection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subsection .intro {
+  padding: 0 1rem; 
+  font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333333;
+  font-size: inherit;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5vw;
+  background-color: #e7e7e7;
+  width: 100%;
+}
+
+.block .text {
+  flex: 1;
+  min-width: 250px;
+  font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#333333;
+  font-size: inherit;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.block .section-image {
+  flex: 1;
+  min-width: 250px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block .section-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+
+.block-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* reverses the order */
+  padding: 2rem 5vw;
+  background-color: rgb(253, 204, 68);
+  width: 100%;
+}
+
+.block-reverse .text {
+  flex: 1;
+  min-width: 250px;
+  font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#333333;
+  font-size: inherit;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.block-reverse .section-image {
+  flex: 1;
+  min-width: 250px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-reverse .section-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.block-solo .block, 
+.block-solo .block-reverse {
+  border-radius: 100px; /* or any value you prefer */
+}
+
+.block-group .block {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+.block-group .block-reverse {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px
+}
+
+
+
+#people {
+  background-color: #ffffff;
+  padding: 5rem 5vw;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: center; /* centers the grid itself */
+  text-align: center;
+  padding-top: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.team-member {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member img {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* passport aspect ratio */
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.team-member p{
+  margin-top: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8rem;
+  color: #472222;
+  line-height: 1.4;
+  text-align: left; /* ← this ensures left alignment */
+  width: 100%; /* ← ensures it spans the full width of the container */
+}
+
+.news-links {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.news-links a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.news-links a:hover {
+  text-decoration: underline;
+}
+
+.publication {
+  margin-bottom: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Show hamburger & collapse menu on small screens */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(253, 204, 68, 0.98);
+    margin-top: 2rem;
+    padding: 0rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    width: 100%;
+    padding: 0rem 0rem;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0rem 0rem; /* smaller clickable area */
+    text-align: center;   /* keep it tidy */
+  }
+}
+
+/* Optional: animate the hamburger to X when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #888888;
+  color: white;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust `--nav-h` to the height of your fixed navbar (including padding) */
+:root { --nav-h: 10px; }
+
+section::before {
+  content: "";
+  display: block;
+  height: var(--nav-h);
+  margin-top: calc(-1 * var(--nav-h));
+  visibility: hidden; /* keeps it invisible */
+}
