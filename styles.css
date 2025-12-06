@@ -211,7 +211,7 @@ section h2 {
   font-size: 1.3rem;
   font-weight: 600;
   color: #494949;
-  text-align: left;
+  text-align: justify;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -272,7 +272,7 @@ section h4 {
   color: #333333;
   font-size: inherit;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 
 
@@ -454,7 +454,7 @@ section h4 {
 /* Show hamburger & collapse menu on small screens */
 @media (max-width: 768px) {
   section {
-    padding: 0rem 10vw 1rem; /* no left/right padding */
+    padding: 0rem 7vw 1rem; /* no left/right padding */
   }
   .hero {
     padding: 5rem 20vw;; /* less padding on small screens */
