@@ -136,15 +136,15 @@ font-family: 'Playfair Display', serif;
   text-align: center;
   align-items: center;     /* Centers the image vertically */
   overflow: hidden; /* hides cropped parts */
-  height: 400px; /* fixed height */
   max-width: 100%; /* Prevents horizontal overflow */
 }
 
 .hero-image img {
-  width: auto;
-  height: 100%;
-  object-fit: cover; /* crops sides to fill container */
-  object-position: center; /* centers the crop */
+  width: 100%;       /* scale with column width */
+  height: auto;      /* keep aspect ratio */
+  max-height: 400px; /* never taller than 400px */
+  object-fit: contain; /* show full image, no cropping */
+  object-position: center;
   border-radius: 8px;
 }
 
@@ -450,6 +450,20 @@ section h4 {
 
 /* Show hamburger & collapse menu on small screens */
 @media (max-width: 768px) {
+  section {
+    padding: 0rem 5vw 1rem; /* no left/right padding */
+  }
+
+  .hero-image {
+    height: auto; /* let height adjust */
+  }
+
+  .hero-image img {
+    width: 100%;   /* scale to container width */
+    height: auto;  /* keep aspect ratio */
+    object-fit: contain; /* prevent cropping */
+  }
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -463,7 +477,7 @@ section h4 {
     flex-direction: column;
     width: 100%;
     background-color: rgba(253, 204, 68, 0.98);
-    margin-top: 2rem;
+    margin-top: 1.4rem;
     padding: 0rem 0;
   }
 
@@ -480,10 +494,26 @@ section h4 {
   .nav-links a {
     display: block;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0rem 0rem; /* smaller clickable area */
     text-align: center;   /* keep it tidy */
   }
+
+
+  .block-solo .block, 
+  .block-solo .block-reverse {
+    border-radius: 50px; /* or any value you prefer */
+  }
+
+  .block-group .block {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  .block-group .block-reverse {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px
+  }
+
 }
 
 /* Optional: animate the hamburger to X when active */

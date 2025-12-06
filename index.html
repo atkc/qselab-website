@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quanutm Sensing Group</title>
+  <title>QSE Lab @ NUS</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -11,7 +11,7 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">Quantum Sensing Group</div>
+      <div class="logo">Quantum Systems Engineering Group</div>
       
       <!-- Hamburger icon -->
       <div class="hamburger">
@@ -34,14 +34,14 @@
 <section id="about" class="hero">
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Pushing the Boundaries of Quantum Sensing</h1>
-      <p>Our group is dedicated to advancing the frontiers of quantum sensing, 
-        with a particular focus on controlling quantum degrees of freedom, such as spins, 
-        and potentially phonons in diamond and other wide-bandgap materials. 
+      <h1>Pushing the Boundaries of Quantum Systems</h1>
+      <p>Our group is dedicated to transforming quantum science into practical technologies, 
+        with a focus on controlling quantum degrees of freedom, such as spins, 
+        and phonons in diamond and other wide-bandgap materials. 
         At the heart of our research lies a fundamental question: 
         <strong>How can quantum systems be effectively interfaced with their environments 
-        to unlock deeper scientific understanding and enable transformative applications?</strong></p>
-        
+        to unlock deeper scientific understanding and deliver transformative applications in sensing and beyond?</strong></p>
+
         <!-- Learn More Button -->
         <a href="#research" class="learn-more-btn">Learn more</a>
     </div>
@@ -126,6 +126,29 @@
       </div>
       <div class="section-image">
         <img src="Brillouin_image.png" alt="Brillouin Classical Correlation" />
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Subsection 1 -->
+  <div class="subsection">
+    <h3>Exploring Innovative Research Themes</h3>
+    <p class = intro>Beyond our core focus on quantum spins and phonons in diamond, we are continually seeking innovative research directions that harness quantum systems 
+   across a broader range of materials and applications. This includes expanding into two-dimensional materials, novel quantum platforms, and interdisciplinary domains where quantum technologies can make a tangible difference. </p>
+    <!-- Sub-subsection 1 -->
+    <div class="block-solo">
+    <div class="block">
+      <div class="text">
+        <h4>Interdisciplinary Quantum Research</h4>
+        <p> We are especially excited about opportunities at the interface of quantum science and biomedicine, 
+          where quantum technologies could open new frontiers in diagnostics, therapeutics, and the understanding 
+          of complex biological systems. Another promising direction is the use of structured light to manipulate 
+          quantum states and advance next-generation imaging and sensing techniques. We welcome collaborations 
+          and new ideas to explore these possibilities together.</p>
+      </div>
+      <div class="section-image" style="font-size:140px; text-align:center; color:#cc3131;">
+        ?
       </div>
     </div>
     </div>
@@ -277,14 +300,33 @@
   });
 </script>
 
+//Hamburger behaviour
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
+    // Toggle menu on hamburger click
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
+    });
+
+    // Collapse on scroll
+    window.addEventListener('scroll', function() {
+      if (navLinks.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+
+    // Collapse when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInside = hamburger.contains(event.target) || navLinks.contains(event.target);
+      if (!isClickInside && navLinks.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
     });
   });
 </script>
