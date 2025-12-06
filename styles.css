@@ -69,7 +69,7 @@ body {
   color: #333333;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.452);
   transition: color 0.3s ease;
 }
@@ -454,10 +454,11 @@ section h4 {
 /* Show hamburger & collapse menu on small screens */
 @media (max-width: 768px) {
   section {
-    padding: 0rem 5vw 1rem; /* no left/right padding */
+    padding: 0rem 10vw 1rem; /* no left/right padding */
   }
-
-
+  .hero {
+    padding: 5rem 20vw;; /* less padding on small screens */
+  }
   .hero-image {
     height: auto; /* let height adjust */
   }
