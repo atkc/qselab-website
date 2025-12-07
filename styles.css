@@ -85,33 +85,28 @@ body {
 
 .hero {
   position: relative; /* enables absolute positioning inside */
-  padding: 10rem 20vw;
+  padding: 6rem 20vw 0rem 20vw; /* top/right/bottom/left */
   background-color: #FEC628;
-  min-height: 100vh;
   height: auto;
 }
 
 .hero-logo {
-  position: static;
-  display: block;
+  display: flex;
   width: 160px;
-  margin: 6rem 0 0 auto; /* right-aligned inside hero padding */
-  text-align: right;
+  margin: 1rem auto 0;
+  justify-content: right; /* ensures logo stays centered */
 }
-
 
 .hero-logo img {
   width: 100%;
   height: auto;
 }
 
-
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .hero-text {
@@ -120,14 +115,14 @@ body {
 }
 
 .hero-text h1 {
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: normal;
   margin-bottom: 0.5rem; 
 }
 
 .hero-text p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
 }
@@ -135,20 +130,21 @@ font-family: 'Playfair Display', serif;
 .hero-image {
   flex: 1;
   min-width: 250px;
+  padding-top: 2rem;
   justify-content: center; /* Centers the image horizontally */
   text-align: center;
-  align-items: center;     /* Centers the image vertically */
   overflow: hidden; /* hides cropped parts */
   max-width: 100%; /* Prevents horizontal overflow */
 }
 
 .hero-image img {
-  width: 100%;       /* scale with column width */
-  height: auto;      /* keep aspect ratio */
-  max-height: 400px; /* never taller than 400px */
-  object-fit: contain; /* show full image, no cropping */
+  width: auto;
+  height: auto;
+  
+  object-fit: contain;
   object-position: center;
-  border-radius: 8px;
+
+  border-radius: 100px;                       /* smooth rounded corners */
 }
 
 
@@ -266,7 +262,7 @@ section h4 {
 }
 
 .subsection .intro {
-  padding: 0 1rem; 
+  padding: 0 0rem; 
   font-weight: normal;
   font-family: 'Source Sans Pro', sans-serif;
   color: #333333;
