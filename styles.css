@@ -83,9 +83,34 @@ body {
   font-weight: bold; /* optional for emphasis */
 }
 
+.announcement {
+  padding: 5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.announcement-box {
+  max-width: 99%;
+  background:  #ffe9ab;
+  padding: 0 30px;
+  border-left: 6px solid #cc3131;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 6px;
+}
+
+.announcement-box h2 {
+  margin: 0 0 0.3rem 0;   /* reduce bottom spacing */
+  color: #cc3131;
+}
+
+.announcement-box p {
+  font-size: 1em;
+}
+
+
 .hero {
   position: relative; /* enables absolute positioning inside */
-  padding: 6rem 20vw 0rem 20vw; /* top/right/bottom/left */
+  padding: 0rem 20vw 0rem 20vw; /* top/right/bottom/left */
   background-color: #FEC628;
   height: auto;
 }
@@ -559,4 +584,12 @@ section::before {
   height: var(--nav-h);
   margin-top: calc(-1 * var(--nav-h));
   visibility: hidden; /* keeps it invisible */
+}
+
+section.hero {
+  background-color: #FEC628;
+}
+
+section.announcement {
+  background-color: #FEC628;
 }
