@@ -233,7 +233,7 @@ section:nth-of-type(even) {
 
 section h2 {
   position: relative;
-  margin: 6rem 0 3rem 0;
+  margin: 2rem 0 3rem 0;
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 600;
@@ -484,7 +484,7 @@ section h4 {
     padding: 0rem 7vw 1rem; /* no left/right padding */
   }
   .hero {
-    padding: 5rem 20vw;; /* less padding on small screens */
+    padding: 0.5rem 15vw;; /* less padding on small screens */
   }
   .hero-image {
     height: auto; /* let height adjust */
@@ -592,4 +592,72 @@ section.hero {
 
 section.announcement {
   background-color: #FEC628;
+}
+
+/* Quick Jump Buttons (fixed at bottom of the screen) */
+.quick-nav {
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom of the screen */
+  justify-content: center;
+  display: none; /* Initially hidden on large screens */
+  gap: 0.5rem;
+  background-color:#6b6b6b8c;
+  padding: 0.5rem 0rem;
+  border-radius: 20px;
+  z-index: 999; /* Make sure it's above other content */
+}
+
+.quick-nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  background-color: #ffffff62;
+  transition: background 0.3s ease;
+}
+
+.quick-nav a:hover {
+  background-color: #2e2e2e; /* Active color when hovered */
+  color: #ffffff;
+}
+
+/* Show the quick-nav only for small screens */
+@media (max-width: 768px) {
+  .quick-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap : 0.2rem 0rem;
+  }
+
+  .navbar .nav-links, .hamburger {
+    display: none; /* Hide hamburger and nav links */
+  }
+}
+
+/* Default: show two lines for large screens */
+.logo-break {
+  display: inline;  /* the <br> works normally */
+}
+
+/* Small screens: collapse to one line */
+@media (max-width: 768px) {
+
+  .logo {
+    text-align: center;    /* Center the logo */
+    white-space: nowrap;   /* Prevent the logo from wrapping */
+    width: 100%;            /* Ensure the logo takes up full width */
+    display: block;        /* Make the logo a block element */
+    margin: 0 auto;        /* Center it horizontally */
+    font-size: 1.5rem;   /* Slightly larger font size */
+    line-height: 1.2;    /* Slightly larger line height */
+  }
+  .logo-break {
+    display: none;      /* remove the line break */
+  }
+
+  .announcement {
+    padding: 4rem 0 0 0;
+  }
 }
