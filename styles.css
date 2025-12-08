@@ -105,8 +105,8 @@ body {
 
 .announcement-box p {
   font-size: 1em;
+  text-align: justify;
 }
-
 
 .hero {
   position: relative; /* enables absolute positioning inside */
