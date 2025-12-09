@@ -130,7 +130,7 @@ body {
   position: static;
   display: block;
   width: 160px;
-  margin: 6rem 0 0 auto; /* right-aligned inside hero padding */
+  margin: 1rem 0 0 auto; /* right-aligned inside hero padding */
   text-align: right;
 }
 
@@ -493,7 +493,7 @@ section h4 {
     padding: 0rem 7vw 1rem; /* no left/right padding */
   }
   .hero {
-    padding: 0.5rem 15vw;; /* less padding on small screens */
+    padding: 0.5rem 7vw;; /* less padding on small screens */
   }
   .hero-image {
     height: auto; /* let height adjust */
@@ -570,13 +570,19 @@ section h4 {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-
-
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem; /* original padding */
   background-color: #888888;
   color: white;
+  padding-bottom: 6rem; /* add extra space for quick-nav */
+}
+
+/* Optional: only add extra space on mobile where quick-nav is visible */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 5rem; /* adjust based on quick-nav height */
+  }
 }
 
 
@@ -610,7 +616,7 @@ section.announcement {
   transform: translateX(-50%);
   display: none;
 
-  background-color: #ffe59da7;
+  background-color: #ffeebfc3;
   padding: 0.4rem 0.2rem;        /* MUCH smaller padding */
   border-radius: 16px;
 
@@ -626,11 +632,12 @@ section.announcement {
 .quick-nav a {
   text-decoration: none;
   font-size: 1.1rem;
-  color: #333;
+  color: #343434d6;
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
-  background-color: #ffffff62;
+  background-color: #ffffff96;
   transition: background 0.3s ease;
+  font-weight: 550;
 }
 
 .quick-nav a:hover {
@@ -648,12 +655,23 @@ section.announcement {
 @media (max-width: 768px) {
   .quick-nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;        /* ← keep items on 1 row */
+    overflow-x: auto;         /* ← allow horizontal scroll if needed */
+    white-space: nowrap;      /* ← prevent wrapping */
+    width: 100%;              /* ← full width */
+    bottom: 5px;
+    gap: 0.4rem;
     justify-content: center;
-    gap : 0.2rem 0rem;
+    box-sizing: border-box;
+  }
+
+  .quick-nav a {
+    flex: 0 0 auto;           /* ← ensures each item stays compact */
+    padding: 0.35rem 0.9rem;  /* smaller buttons */
+    font-size: 1rem;
   }
  .announcement {
-    padding: 4rem 0 0 0;
+    padding: 7rem 7vw 0 7vw;
   }
 }
 
