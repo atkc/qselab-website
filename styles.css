@@ -22,12 +22,13 @@ body {
   width: 100%;
   z-index: 1000;
   background-color: rgba(253, 204, 68, 0.95);
-  padding: 1rem 2rem;
+  padding: 1rem 15vw 1rem 15vw;
   display: flex;
   justify-content: space-between;
   align-items: center; /* allow items to align at the top */
   flex-wrap: wrap;         /* let children wrap to new lines */
   min-height: auto;      
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Hamburger icon */
@@ -47,12 +48,22 @@ body {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-weight: normal;
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.452);
-  text-align: left;
-  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.65);
+  position: relative;  /* important for ::after positioning */
+  display: inline-block; /* ensures the pseudo-element aligns to the text */
+}
+
+.emphasize {
+  color: #cc3131;  /* Accent color for emphasis (you can change this) */
+  font-weight: 600; /* Make it bolder */
+  font-style: italic;  /* Remove italic for emphasis */
+  text-transform: uppercase;  /* Optional: makes the letters uppercase */
+  letter-spacing: 0.5px;  /* Optional: slightly increase the space between letters for emphasis */
 }
 
 .nav-links {
@@ -84,7 +95,7 @@ body {
 }
 
 .announcement {
-  padding: 5rem 0 0 0;
+  padding: 5rem 15vw 1rem 15vw;
   display: flex;
   justify-content: center;
 }
@@ -110,7 +121,7 @@ body {
 
 .hero {
   position: relative; /* enables absolute positioning inside */
-  padding: 0rem 20vw 0rem 20vw; /* top/right/bottom/left */
+  padding: 0rem 15vw 0rem 15vw; /* top/right/bottom/left */
   background-color: #FEC628;
   height: auto;
 }
@@ -161,21 +172,19 @@ body {
   flex: 1;
   min-width: 250px;
   margin-top: 1rem;
-  position: relative;   /* Enables absolute positioning */
-  justify-content: center; /* Centers the image horizontally */
-  overflow: hidden; /* hides cropped parts */
-  max-width: 100%; /* Prevents horizontal overflow */
-  border-radius: 100px;                       /* smooth rounded corners */
+  display: flex;              /* Make it a flex container */
+  justify-content: flex-end;  /* Push image to the right */
+  overflow: hidden;
+  border-radius: 100px;
 }
 
 .hero-image img {
-  width: auto;
   height: 100%;
-  display: block;
-  margin: 0 auto;             /* keeps it centered */
-  object-fit: cover;          /* allow cropping */
-  object-position: center;    /* crop equally left/right */
-  border-radius: inherit;     /* keep smooth rounded edges */
+  width: auto;
+  object-fit: cover;
+  object-position: right;     /* Crop from the left, keep right edge visible */
+  border-radius: inherit;
+  margin: 0;                  /* Remove auto-centering */
 }
 
 
@@ -594,17 +603,24 @@ section.announcement {
   background-color: #FEC628;
 }
 
-/* Quick Jump Buttons (fixed at bottom of the screen) */
 .quick-nav {
   position: fixed;
-  bottom: 30px; /* Distance from the bottom of the screen */
-  justify-content: center;
-  display: none; /* Initially hidden on large screens */
-  gap: 0.5rem;
-  background-color:#6b6b6b8c;
-  padding: 0.5rem 0rem;
-  border-radius: 20px;
-  z-index: 999; /* Make sure it's above other content */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  background-color: #ffe59da7;
+  padding: 0.4rem 0.2rem;        /* MUCH smaller padding */
+  border-radius: 16px;
+
+  z-index: 999;
+
+  display: flex;
+  flex-wrap: wrap;              /* allow multiple rows */
+  justify-content: center;      /* center items within */
+  gap: 0.3rem 0rem;           /* small vertical / horizontal gaps */
+  max-width: 90%;               /* prevent huge padding edges */
 }
 
 .quick-nav a {
@@ -622,6 +638,12 @@ section.announcement {
   color: #ffffff;
 }
 
+.quick-nav a.active {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+
 /* Show the quick-nav only for small screens */
 @media (max-width: 768px) {
   .quick-nav {
@@ -630,34 +652,11 @@ section.announcement {
     justify-content: center;
     gap : 0.2rem 0rem;
   }
-
-  .navbar .nav-links, .hamburger {
-    display: none; /* Hide hamburger and nav links */
-  }
-}
-
-/* Default: show two lines for large screens */
-.logo-break {
-  display: inline;  /* the <br> works normally */
-}
-
-/* Small screens: collapse to one line */
-@media (max-width: 768px) {
-
-  .logo {
-    text-align: center;    /* Center the logo */
-    white-space: nowrap;   /* Prevent the logo from wrapping */
-    width: 100%;            /* Ensure the logo takes up full width */
-    display: block;        /* Make the logo a block element */
-    margin: 0 auto;        /* Center it horizontally */
-    font-size: 1.5rem;   /* Slightly larger font size */
-    line-height: 1.2;    /* Slightly larger line height */
-  }
-  .logo-break {
-    display: none;      /* remove the line break */
-  }
-
-  .announcement {
+ .announcement {
     padding: 4rem 0 0 0;
   }
+}
+
+.navbar .nav-links, .hamburger {
+  display: none; /* Hide hamburger and nav links */
 }

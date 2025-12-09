@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QSE Lab @ NUS</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="favicon.png">
 </head>
 
 <header>
 <nav class="navbar">
     <div class="logo">
-      Quantum Systems <span class="logo-break"><br></span>Engineering Group
+      <span><span class="emphasize">Q</span>uantum <span class="emphasize">S</span>ystems <span class="emphasize">E</span>ngineering Group</span>
     </div>
-
 
     <!-- Quick navigation links (for small screens) -->
     <div class="quick-nav">
@@ -254,7 +257,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Research Group. All rights reserved.</p>
+  <p>&copy; 2025 Quantum Systems Engineering Group, National University of Singapore.</p>
 </footer>
 
   
@@ -347,6 +350,48 @@
   });
 </script>
 
+<!-- Highlight quick nav links based on section in view -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const quickLinks = document.querySelectorAll(".quick-nav a");
+
+  function activateLink(id) {
+    quickLinks.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+  }
+
+  // Intersection Observer for normal sections
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          activateLink(entry.target.id);
+        }
+      });
+    },
+    {
+      rootMargin: "-40% 0px -50% 0px",
+      threshold: 0
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // EXTRA FIX: detect when user scrolls near the bottom = highlight Opportunities
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    const lastSection = document.querySelector("#opportunities");
+
+    if (scrollPos >= pageHeight - 50) {
+      activateLink("opportunities");
+    }
+  });
+});
+</script>
 
 
 
