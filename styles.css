@@ -609,7 +609,7 @@ section.announcement {
   transform: translateX(-50%);
   display: none;
 
-  background-color: #ffeebfc3;
+  background-color: #ffeebf8f;
   padding: 0.4rem 0.2rem;        /* MUCH smaller padding */
   border-radius: 16px;
 
@@ -625,21 +625,21 @@ section.announcement {
 .quick-nav a {
   text-decoration: none;
   font-size: 1.1rem;
-  color: #343434d6;
+  color: #343434;
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
-  background-color: #ffffff96;
+  background-color: #ffffff82;
   transition: background 0.3s ease;
   font-weight: 550;
 }
 
 .quick-nav a:hover {
-  background-color: #2e2e2e; /* Active color when hovered */
+  background-color: #2e2e2e84; /* Active color when hovered */
   color: #ffffff;
 }
 
 .quick-nav a.active {
-  background-color: #2e2e2e;
+  background-color: #2e2e2e84; /* Active color when active */
   color: #ffffff;
 }
 
