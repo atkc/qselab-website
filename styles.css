@@ -575,14 +575,7 @@ footer {
   padding: 2rem 1rem; /* original padding */
   background-color: #888888;
   color: white;
-  padding-bottom: 6rem; /* add extra space for quick-nav */
-}
-
-/* Optional: only add extra space on mobile where quick-nav is visible */
-@media (max-width: 768px) {
-  footer {
-    padding-bottom: 5rem; /* adjust based on quick-nav height */
-  }
+  padding-bottom: 10rem; /* add extra space for quick-nav */
 }
 
 
