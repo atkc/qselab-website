@@ -15,13 +15,15 @@ export function NewsCard({ item, compact = false }: { item: NewsItem; compact?: 
       </div>
       <h3>{item.title}</h3>
       <p>{item.summary}</p>
-      <div className="inline-links">
-        {item.links.map((link) => (
-          <a key={link.href} href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noreferrer" : undefined}>
-            {link.label} <span aria-hidden="true">↗</span>
-          </a>
-        ))}
-      </div>
+      {item.links.length > 0 ? (
+        <div className="inline-links">
+          {item.links.map((link) => (
+            <a key={link.href} href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noreferrer" : undefined}>
+              {link.label} <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

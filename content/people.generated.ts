@@ -3,8 +3,50 @@ export const generatedPeople = [
   {
     "name": "Anthony K. C. Tan",
     "role": "Principal Investigator",
-    "image": "/images/people/anthony-tan.jpg",
+    "image": "/images/people/PI_Anthony_K_C_Tan.jpg",
     "alt": "Portrait of Anthony K. C. Tan",
     "email": "tan.anthony@nus.edu.sg"
+  },
+  {
+    "name": "Dayne Dai",
+    "role": "PhD Student",
+    "image": "/images/people/PHD_Dayne_Dai.jpeg",
+    "alt": "Portrait of Dayne Dai"
+  },
+  {
+    "name": "Huaizheng Ye",
+    "role": "PhD Student",
+    "image": "/images/people/PHD_Huaizheng_Ye.jpeg",
+    "alt": "Portrait of Huaizheng Ye"
+  },
+  {
+    "name": "Grace Lee",
+    "role": "Undergraduate",
+    "image": "/images/people/UG_Grace_Lee.jpeg",
+    "alt": "Portrait of Grace Lee"
+  },
+  {
+    "name": "Kristoffer Videl Wijono",
+    "role": "Undergraduate",
+    "image": "/images/people/UG_Kristoffer_Videl_Wijono.jpeg",
+    "alt": "Portrait of Kristoffer Videl Wijono"
+  },
+  {
+    "name": "Qi Yuan Yu",
+    "role": "Undergraduate",
+    "image": "/images/people/UG_Qi_Yuan_Yu.jpeg",
+    "alt": "Portrait of Qi Yuan Yu"
+  },
+  {
+    "name": "Surya Nayar",
+    "role": "Undergraduate",
+    "image": "/images/people/UG_Surya_Nayar.jpeg",
+    "alt": "Portrait of Surya Nayar"
+  },
+  {
+    "name": "Yong Le Lee",
+    "role": "Undergraduate",
+    "image": "/images/people/UG_Yong_Le_Lee.jpeg",
+    "alt": "Portrait of Yong Le Lee"
   }
 ] as const;

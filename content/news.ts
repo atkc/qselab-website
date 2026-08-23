@@ -17,6 +17,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    date: "2026-08-24",
+    type: "People",
+    title: "QSE Lab welcomes its first students",
+    summary:
+      "Dayne Dai and Huaizheng Ye join as PhD students supported by NUS Research Scholarships, leading our NV-in-diamond and quantum Brillouin efforts, respectively. Grace Lee, Yong Le Lee, Surya Nayar, Qi Yuan Yu, Kristoffer Videl Wijono, Aliyev, Khadijah and Vivekan will contribute across the lab’s research through year-long undergraduate projects.",
+    links: [],
+    featured: true,
+  },
+  {
     date: "2026-08-23",
     type: "Opportunity",
     title: "Join the Quantum Systems Engineering Group",

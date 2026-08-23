@@ -22,8 +22,8 @@ export default function Home() {
             <p className="eyebrow">NUS · Electrical & Computer Engineering</p>
             <h1 id="hero-title">Interfacing quantum systems.</h1>
             <p className="hero-lede">
-              We study how quantum systems behave and evolve in real-world environments. By precisely controlling spins,
-              light and sound, we develop innovative approaches to&nbsp;
+              We study how quantum systems behave and evolve in real-world environments. By precisely controlling quantum
+              degrees of freedom (e.g., spins and phonons), we develop innovative approaches to&nbsp;
               <em>interface quantum systems to other scientific domains</em>.
             </p>
             <div className="hero-actions">
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="section-heading research-heading">
             <div>
               <p className="eyebrow">People</p>
-              <h2 id="people-heading">Fresh minds, crossing boundaries</h2>
+              <h2 id="people-heading">Interdisciplinary minds, crossing boundaries</h2>
             </div>
             <p>We work across quantum optics, condensed matter, microwave control, cryogenics and device engineering.</p>
           </div>
