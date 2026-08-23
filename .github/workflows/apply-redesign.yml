@@ -1,0 +1,31 @@
+name: Apply redesigned QSE website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/apply-redesign.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Replace repository with validated source
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -q qselab-deploy-source.zip -d "$RUNNER_TEMP/new-site"
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a "$RUNNER_TEMP/new-site/." .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy redesigned QSE website and archive legacy site"
+          git push origin HEAD:main
