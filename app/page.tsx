@@ -154,8 +154,8 @@ export default function Home() {
               <span />
             </div>
             <p className="eyebrow">Find us</p>
-            <h3>National University of Singapore</h3>
-            <p>Electrical and Computer Engineering<br />Kent Ridge, Singapore</p>
+            <h3>Quantum Engineering Lab @ NUS</h3>
+            <p>4 Engineering Drive 3<br />Block E4 #02-04</p>
             <a href="https://maps.google.com/?q=National+University+of+Singapore+Electrical+and+Computer+Engineering" target="_blank" rel="noreferrer">
               Open map <span aria-hidden="true">↗</span>
             </a>
