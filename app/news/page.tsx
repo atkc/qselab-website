@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FloatingNav } from "@/components/FloatingNav";
+import { MediaCoverage } from "@/components/MediaCoverage";
 import { NewsCard } from "@/components/NewsCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -26,6 +27,7 @@ export default function NewsPage() {
         </header>
         <section className="section-shell news-archive" aria-label="All news items">
           {newsItems.map((item) => <NewsCard item={item} compact key={`${item.date}-${item.title}`} />)}
+          <MediaCoverage />
         </section>
       </main>
       <SiteFooter />

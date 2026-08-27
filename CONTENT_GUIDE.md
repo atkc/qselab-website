@@ -12,6 +12,10 @@ The site is intentionally data-driven. Routine updates do not require editing pa
 
 Use one of these news types: `Paper`, `Media`, `People`, `Event`, `Opportunity` or `Award`.
 
+## Edit media coverage
+
+The monochrome outlet grid on the homepage and News page is controlled by `content/media.ts`. Copy an existing item and change its `brand`, `displayName`, `articleTitle` and article `href`. The grid will update automatically.
+
 ## Add a publication
 
 1. Open `content/publications.ts`.

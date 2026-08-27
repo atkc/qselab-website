@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FloatingNav } from "@/components/FloatingNav";
+import { MediaCoverage } from "@/components/MediaCoverage";
 import { NewsCard } from "@/components/NewsCard";
 import { ResearchCard } from "@/components/ResearchCard";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -60,6 +61,7 @@ export default function Home() {
               <NewsCard item={item} key={`${item.date}-${item.title}`} />
             ))}
           </div>
+          <MediaCoverage />
         </section>
 
         <section id="research" className="research-section section-shell" data-nav-section aria-labelledby="research-heading">
