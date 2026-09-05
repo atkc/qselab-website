@@ -3,6 +3,7 @@
 // 2. Change its date, type, title, summary and links.
 // 3. Keep newest items at the top and commit the file.
 // The homepage automatically shows the first four featured entries.
+// For visitor news, lead the title with the visitors' names.
 
 export type NewsLink = { label: string; href: string };
 
@@ -28,7 +29,7 @@ export const newsItems: NewsItem[] = [
   {
     date: "2026-09-05",
     type: "Event",
-    title: "Cavendish researchers visit QSE Lab",
+    title: "Qian Ling and Zak from Cavendish visit QSE Lab!",
     summary:
       "We welcomed Qian Ling from Mete Atatüre’s QOMS group at the Cavendish Laboratory for a talk titled “Scanning NV Microscopy for Emergent Condensed Matter Phenomena”. Zak from the Cavendish Laboratory’s QEG joined the visit.",
     links: [],
