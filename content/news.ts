@@ -29,7 +29,7 @@ export const newsItems: NewsItem[] = [
   {
     date: "2026-09-05",
     type: "Event",
-    title: "Qian Ling and Zak visit from University of Cambridge!",
+    title: "Qian Ling and Zak visit from the University of Cambridge!",
     summary:
       "A big welcome to Qian Ling and Zak who dropped by the lab from Cambridge! Qian Ling (from the QOMS group at Cavendish Laboratory) gave an awesome talk on her scanning NV microscopy research, and Zak (from QEG) joined the tour to check out our setup. Thanks for dropping by! Great science chats, great company! ☕️✨",
     links: [],
