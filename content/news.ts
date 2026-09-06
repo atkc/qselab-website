@@ -29,9 +29,9 @@ export const newsItems: NewsItem[] = [
   {
     date: "2026-09-05",
     type: "Event",
-    title: "Qian Ling and Zak from Cavendish visit QSE Lab!",
+    title: "Qian Ling and Zak visit from University of Cambridge!",
     summary:
-      "We welcomed Qian Ling from Mete Atatüre’s QOMS group at the Cavendish Laboratory for a talk titled “Scanning NV Microscopy for Emergent Condensed Matter Phenomena”. Zak from the Cavendish Laboratory’s QEG joined the visit.",
+      "A big welcome to Qian Ling and Zak who dropped by the lab from Cambridge! Qian Ling (from the QOMS group at Cavendish Laboratory) gave an awesome talk on her scanning NV microscopy research, and Zak (from QEG) joined the tour to check out our setup. Thanks for dropping by! Great science chats, great company! ☕️✨",
     links: [],
     images: [
       {
