@@ -52,6 +52,31 @@ export const newsItems: NewsItem[] = [
     featured: true,
   },
   {
+    date: "2026-09-04",
+    type: "Event",
+    title: "Our first NV ODMR signal!",
+    summary:
+      "A Friday milestone for the lab! On 4 September, we observed our first optically detected magnetic resonance (ODMR) signal from an NV centre in diamond. As the applied magnetic field increased, the resonance peaks split further apart—an exciting first step for our diamond quantum-sensing work! 💎✨",
+    links: [],
+    images: [
+      {
+        src: "/images/news/first-nv-odmr-lower-field.webp",
+        alt: "ODMR frequency scan showing the NV resonance splitting at a lower applied magnetic field",
+        caption: "Our first NV ODMR spectrum, at the lower applied magnetic field.",
+        width: 900,
+        height: 500,
+      },
+      {
+        src: "/images/news/first-nv-odmr-higher-field.webp",
+        alt: "ODMR frequency scan showing wider NV resonance splitting at a higher applied magnetic field",
+        caption: "The ODMR resonances split further apart as the magnetic field increases.",
+        width: 900,
+        height: 500,
+      },
+    ],
+    featured: true,
+  },
+  {
     date: "2026-08-24",
     type: "People",
     title: "QSE Lab welcomes its first students",
