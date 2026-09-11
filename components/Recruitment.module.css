@@ -1,0 +1,329 @@
+.bannerShell {
+  padding-top: 1.25rem;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--rust);
+  border-radius: 0.5rem;
+  background: var(--paper-deep);
+}
+
+.bannerLabel {
+  flex-shrink: 0;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.bannerCopy {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  min-width: 0;
+  font-size: 0.88rem;
+}
+
+.bannerCopy p {
+  margin: 0;
+}
+
+.bannerCopy a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.bannerAction,
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.bannerAction {
+  flex-shrink: 0;
+}
+
+.bannerAction:hover,
+.inlineLink:hover,
+.resourceLink:hover,
+.themeLink:hover {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.joinSection {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+  scroll-margin-top: 2rem;
+}
+
+.joinIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.joinIntro h2 {
+  max-width: 14ch;
+  font-size: clamp(2.5rem, 4.5vw, 4.6rem);
+}
+
+.introText {
+  max-width: 54ch;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.contactBox {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 0.85rem;
+  background: var(--paper-deep);
+}
+
+.contactBox > p:not(:first-child) {
+  font-size: 0.95rem;
+}
+
+.openingGrid,
+.fundingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.panel {
+  min-width: 0;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: var(--white);
+  scroll-margin-top: 2rem;
+}
+
+.panel > h3,
+.panel > h4,
+.fundingHeader h3,
+.internships > h3 {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.panel > p:not(:first-child) {
+  font-size: 0.95rem;
+}
+
+.themeList,
+.resourceList,
+.internshipGrid {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.themeList {
+  margin-bottom: 1.25rem;
+}
+
+.themeList li + li,
+.resourceList li + li {
+  border-top: 1px solid var(--line-soft);
+}
+
+.themeLink {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr) 1rem;
+  align-items: baseline;
+  gap: 0.65rem;
+  min-height: 48px;
+  padding-block: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.themeNumber {
+  color: var(--rust);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.fundingNote {
+  margin: 1rem 0 0;
+  padding: 1rem;
+  border-left: 3px solid var(--gold);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.fundingHeader {
+  max-width: 72ch;
+  margin-top: 3.5rem;
+}
+
+.fundingHeader > p:last-child,
+.sectionDescription {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.fundingGrid {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.mastersPanel {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.resourceList li {
+  padding-block: 0.6rem;
+}
+
+.resourceList li:first-child {
+  padding-top: 0;
+}
+
+.resourceList li:last-child {
+  padding-bottom: 0;
+}
+
+.resourceLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  min-height: 44px;
+  padding-block: 0.4rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.resourceLink > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.resourceLink > span:last-child {
+  flex-shrink: 0;
+}
+
+.resourceDescription {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.internships {
+  margin-top: 3.5rem;
+  scroll-margin-top: 2rem;
+}
+
+.sectionDescription {
+  max-width: 86ch;
+}
+
+.internshipGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.terms {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.joinFooter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.joinFooter h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.joinFooter p:not(:first-child),
+.joinFooter address {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: normal;
+}
+
+@media (max-width: 1000px) {
+  .bannerCopy {
+    display: block;
+  }
+
+  .bannerCopy p + p {
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .joinIntro,
+  .fundingGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .joinIntro h2 {
+    max-width: 18ch;
+  }
+
+  .internshipGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .banner {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+  }
+
+  .bannerCopy {
+    flex-basis: 100%;
+  }
+
+  .bannerAction {
+    margin-left: auto;
+  }
+
+  .openingGrid,
+  .joinFooter {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

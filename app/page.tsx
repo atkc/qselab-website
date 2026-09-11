@@ -3,6 +3,7 @@ import { FloatingNav } from "@/components/FloatingNav";
 import { MediaCoverage } from "@/components/MediaCoverage";
 import { NewsCard } from "@/components/NewsCard";
 import { ResearchCard } from "@/components/ResearchCard";
+import { JoinSection, RecruitmentBanner } from "@/components/Recruitment";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { featuredNews } from "@/content/news";
@@ -18,6 +19,7 @@ export default function Home() {
       </a>
       <SiteHeader />
       <main id="main-content">
+        <RecruitmentBanner />
         <section className="hero section-shell" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">NUS · Electrical & Computer Engineering</p>
@@ -31,7 +33,7 @@ export default function Home() {
               <a className="button button-primary" href="#research">
                 Explore our research
               </a>
-              <a className="button button-quiet" href="mailto:tan.anthony@nus.edu.sg">
+              <a className="button button-quiet" href="#join">
                 Work with us <span aria-hidden="true">↗</span>
               </a>
             </div>
@@ -140,29 +142,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="join" className="join-section section-shell" data-nav-section aria-labelledby="join-heading">
-          <div className="join-copy">
-            <p className="eyebrow">Join & collaborate</p>
-            <h2 id="join-heading">Bring us an interesting idea or problem.</h2>
-            <p>
-              We welcome PhD, postdoctoral and internship enquiries, as well as collaborations with scientists and industry teams.
-            </p>
-            <a className="button button-dark" href="mailto:tan.anthony@nus.edu.sg">
-              Start a conversation <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div className="location-card">
-            <div className="location-marker" aria-hidden="true">
-              <span />
-            </div>
-            <p className="eyebrow">Find us</p>
-            <h3>Quantum Engineering Lab @ NUS</h3>
-            <p>4 Engineering Drive 3<br />Block E4 #02-04</p>
-            <a href="https://maps.google.com/?q=National+University+of+Singapore+Electrical+and+Computer+Engineering" target="_blank" rel="noreferrer">
-              Open map <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </section>
+        <JoinSection />
       </main>
       <SiteFooter />
       <FloatingNav />
