@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build static site
         run: npm run build:pages
+      - name: Check rendered People roster
+        run: node --test tests/people-roster.test.mjs
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

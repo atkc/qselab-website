@@ -20,10 +20,18 @@ export const generatedPeople = [
     "alt": "Portrait of Huaizheng Ye"
   },
   {
+    "name": "Aliyev",
+    "role": "Undergraduate"
+  },
+  {
     "name": "Grace Lee",
     "role": "Undergraduate",
     "image": "/images/people/UG_Grace_Lee.jpeg",
     "alt": "Portrait of Grace Lee"
+  },
+  {
+    "name": "Khadijah",
+    "role": "Undergraduate"
   },
   {
     "name": "Kristoffer Videl Wijono",
@@ -42,6 +50,10 @@ export const generatedPeople = [
     "role": "Undergraduate",
     "image": "/images/people/UG_Surya_Nayar.jpeg",
     "alt": "Portrait of Surya Nayar"
+  },
+  {
+    "name": "Vivekan",
+    "role": "Undergraduate"
   },
   {
     "name": "Yong Le Lee",

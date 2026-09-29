@@ -38,6 +38,8 @@ Add a portrait to the top-level `people/` folder. A square or portrait image on 
 
 Use underscores between the words in each person's name, for example `PHD_Alex_Tan.png`. Profiles are ordered by role and then alphabetically by name.
 
+If there is no portrait yet, add the person's known name and role prefix to `people/portraitless.json` instead. Their card shows an initial; a matching portrait filename will replace it automatically without duplicating the profile.
+
 ## Edit a research theme
 
 All four theme summaries and detail-page content live in `content/research.ts`. Keep homepage summaries to one sentence. Longer detail copy belongs in `question`, `approach` and `projects`.

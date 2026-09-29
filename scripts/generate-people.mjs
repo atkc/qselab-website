@@ -1,8 +1,9 @@
-import { copyFile, mkdir, readdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const projectRoot = process.cwd();
 const sourceDirectory = path.join(projectRoot, "people");
+const portraitlessFile = path.join(sourceDirectory, "portraitless.json");
 const publicDirectory = path.join(projectRoot, "public", "images", "people");
 const outputFile = path.join(projectRoot, "content", "people.generated.ts");
 
@@ -62,16 +63,24 @@ await mkdir(publicDirectory, { recursive: true });
 
 const publicFiles = await imageFiles(publicDirectory);
 const sourceFiles = await imageFiles(sourceDirectory);
+const portraitlessProfiles = JSON.parse(await readFile(portraitlessFile, "utf8"));
 
 for (const filename of sourceFiles) {
   await copyFile(path.join(sourceDirectory, filename), path.join(publicDirectory, filename));
 }
 
 const filenames = [...new Map([...publicFiles, ...sourceFiles].map((filename) => [filename.toLowerCase(), filename])).values()];
-const discoveredPeople = filenames
-  .map(personFromFilename)
-  .filter(Boolean)
-  .sort((left, right) => left.order - right.order || left.name.localeCompare(right.name));
+const discoveredPeople = filenames.map(personFromFilename).filter(Boolean);
+
+for (const { name, prefix } of portraitlessProfiles) {
+  const role = roleDetails[prefix]?.label;
+  if (!role || !name) throw new Error(`Invalid portraitless profile: ${name} (${prefix})`);
+  if (!discoveredPeople.some((person) => person.name === name && person.role === role)) {
+    discoveredPeople.push({ name, role, order: roleDetails[prefix].order });
+  }
+}
+
+discoveredPeople.sort((left, right) => left.order - right.order || left.name.localeCompare(right.name));
 
 if (!discoveredPeople.some((person) => person.role === "Principal Investigator")) {
   discoveredPeople.unshift({
