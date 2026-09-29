@@ -1044,6 +1044,15 @@ h3 {
   background: var(--white);
 }
 
+.person-photo--empty {
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 5rem;
+}
+
 .person-photo img {
   width: 100%;
   height: 100%;

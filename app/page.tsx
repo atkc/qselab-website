@@ -129,8 +129,12 @@ export default function Home() {
           <div className="people-grid">
             {people.map((person) => (
               <article className="person-card" key={person.name}>
-                <div className="person-photo">
-                  <img src={person.image} alt={person.alt} width="1653" height="2302" loading="lazy" />
+                <div className={`person-photo${person.image ? "" : " person-photo--empty"}`}>
+                  {person.image ? (
+                    <img src={person.image} alt={person.alt ?? `Portrait of ${person.name}`} width="1653" height="2302" loading="lazy" />
+                  ) : (
+                    <span aria-hidden="true">{person.name.charAt(0)}</span>
+                  )}
                 </div>
                 <div className="person-copy">
                   <h3>{person.name}</h3>
