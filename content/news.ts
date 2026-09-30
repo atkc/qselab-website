@@ -27,6 +27,24 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    date: "2026-09-30",
+    type: "Event",
+    title: "Our first widefield NV imaging!",
+    summary:
+      "Another milestone for the lab! On 30 September, we performed our first widefield imaging of NV centres in diamond and measured an optically detected magnetic resonance (ODMR) signal from a selected region. An exciting step forward for our camera-based quantum-sensing experiments! 💎📷",
+    links: [],
+    images: [
+      {
+        src: "/images/news/first-widefield-nv-imaging.jpeg",
+        alt: "Widefield fluorescence image of NV centres in diamond alongside the ODMR signal and contrast measured from a selected region",
+        caption: "Our first widefield NV image and the ODMR signal from the selected region, recorded on 30 September 2026.",
+        width: 2494,
+        height: 1615,
+      },
+    ],
+    featured: true,
+  },
+  {
     date: "2026-09-05",
     type: "Event",
     title: "Qian Ling and Zak visit from the University of Cambridge!",
@@ -74,6 +92,15 @@ export const newsItems: NewsItem[] = [
         height: 500,
       },
     ],
+    featured: true,
+  },
+  {
+    date: "2026-08-25",
+    type: "People",
+    title: "Priyanshu Bhattacharya joins QSE Lab!",
+    summary:
+      "A warm welcome to Priyanshu Bhattacharya, who joined QSE Lab as a Research Engineer on 25 August! A recent graduate of the University of Maryland, he will build on his undergraduate research on NV centres in diamond as part of our quantum-sensing efforts. 💎✨",
+    links: [],
     featured: true,
   },
   {

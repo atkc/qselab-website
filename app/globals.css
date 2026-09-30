@@ -1571,6 +1571,10 @@ h3 {
   min-width: 0;
 }
 
+.news-gallery figure:only-child {
+  grid-column: 1 / -1;
+}
+
 .news-gallery img {
   display: block;
   width: 100%;

@@ -20,6 +20,12 @@ export const generatedPeople = [
     "alt": "Portrait of Huaizheng Ye"
   },
   {
+    "name": "Priyanshu Bhattacharya",
+    "role": "Research Engineer",
+    "image": "/images/people/RE_Priyanshu_Bhattacharya.jpeg",
+    "alt": "Portrait of Priyanshu Bhattacharya"
+  },
+  {
     "name": "Grace Lee",
     "role": "Undergraduate",
     "image": "/images/people/UG_Grace_Lee.jpeg",

@@ -9,8 +9,8 @@ const outputFile = path.join(projectRoot, "content", "people.generated.ts");
 const roleDetails = {
   PI: { label: "Principal Investigator", order: 0 },
   PD: { label: "Postdoctoral Researcher", order: 1 },
-  RE: { label: "Research Engineer", order: 2 },
-  PHD: { label: "PhD Student", order: 3 },
+  PHD: { label: "PhD Student", order: 2 },
+  RE: { label: "Research Engineer", order: 3 },
   UG: { label: "Undergraduate", order: 4 },
 };
 
